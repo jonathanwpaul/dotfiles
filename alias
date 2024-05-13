@@ -1,0 +1,31 @@
+alias downloads='~/Downloads/'
+alias documents='~/Documents/'
+alias desktop='~/Desktop/'
+alias dcpc='~/Documents/dev/dcpc'
+alias dev='~/Documents/dev'
+alias n='nvim'
+alias notes='~/OneDrive/OneDrive\ -\ Deloitte\ \(O365D\)/notes'
+alias onedrive='~/Library/CloudStorage/OneDrive-Deloitte\(O365D\)'
+
+
+# -------------------------------------------------------------------
+# Git
+# -------------------------------------------------------------------
+alias ga='git add'
+alias gap='git add -p'
+alias gp='git push'
+alias gl='git log'
+alias gs='git status'
+alias gd='git diff'
+alias gm='git commit -m'
+alias gma='git commit -am'
+alias gb='git branch'
+alias gc='git checkout'
+alias gra='git remote add'
+alias grr='git remote rm'
+alias gpu='git pull'
+alias gcl='git clone'
+alias gta='git tag -a -m'
+alias gf='git reflog'
+alias superlog="git log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%an%C(reset)%C(bold yellow)%d%C(reset) %C(dim white)- %s%C(reset)' --all"
+
