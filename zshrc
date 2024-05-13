@@ -16,6 +16,7 @@ antigen bundle zsh-users/zsh-autosuggestions
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
 
+antigen bundle zsh-users/zsh-history-substring-search
 # Load the theme.
 eval "$(starship init zsh)"
 
