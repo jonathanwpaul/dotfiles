@@ -7,7 +7,8 @@ for i in $(ls); do
 done
 
 # install antigen plugin manager
-curl -L git.io/antigen > "$HOME"/antigen.zsh
+curl -L git.io/antigen > "$HOME"/antigen.sh
+source "$HOME"/antigen.sh
 
 # install starship theming
 curl -sS https://starship.rs/install.sh | sh
