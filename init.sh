@@ -8,3 +8,6 @@ done
 
 # install antigen plugin manager
 curl -L git.io/antigen > "$HOME"/antigen.zsh
+
+# install starship theming
+curl -sS https://starship.rs/install.sh | sh
