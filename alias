@@ -6,6 +6,7 @@ alias dev='~/Documents/dev'
 alias n='nvim'
 alias notes='~/OneDrive/OneDrive\ -\ Deloitte\ \(O365D\)/notes'
 alias onedrive='~/Library/CloudStorage/OneDrive-Deloitte\(O365D\)'
+alias oh='~/Documents/dev/one-health'
 
 
 # -------------------------------------------------------------------

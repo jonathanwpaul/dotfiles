@@ -1,0 +1,276 @@
+{
+  "main": {
+    "id": "799d1b733c509339",
+    "type": "split",
+    "children": [
+      {
+        "id": "aa8f75a5299b9b7f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "537d0f7faeed16e5",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "all-tasks.md",
+                "mode": "preview",
+                "source": true
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "all-tasks"
+            }
+          },
+          {
+            "id": "05f0e74e8790024b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ncezid-bridge/DCLSR/tasks.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "tasks"
+            }
+          },
+          {
+            "id": "efcf0e4a8519eeda",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ncezid-bridge/OneHealth/tasks.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "tasks"
+            }
+          },
+          {
+            "id": "5d1ef47c095856e7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ncezid-bridge/OneHealth/tasks.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "tasks"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3fcbe3b925dc0bce",
+    "type": "split",
+    "children": [
+      {
+        "id": "de9d52be77bbaef8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "58587f9dcf1130df",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "9b6331a70935f26c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "30e110bedfe771b1",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 248.5
+  },
+  "right": {
+    "id": "0590bf290adb9cfa",
+    "type": "split",
+    "children": [
+      {
+        "id": "7e99e415ad399e40",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e2fc4d67d6044ab7",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "b0fd6d9c731cbc25",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "7828e481d0728475",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "49295e94d5b59314",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {},
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          },
+          {
+            "id": "90908221f671c85d",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": true,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "active": "5d1ef47c095856e7",
+  "lastOpenFiles": [
+    "all-tasks.md",
+    "ncezid-bridge/DCLSR/tasks.md",
+    "ncezid-bridge/DCLSR/fulfillment doc requirement/notes.md",
+    "ncezid-bridge/OneHealth/tasks.md",
+    "competitive-analysis/CDC Op Model Operations/tasks.md",
+    "tasks.md",
+    "HRSA proposal.md",
+    "ncezid-bridge/DCLSR/fulfillment doc requirement",
+    "resource-hub/Onboarding.md",
+    "ncezid-bridge/OneHealth/set-up.md",
+    "ncezid-bridge/meetings/QARS-dry-run.md",
+    "ncezid-bridge/DCLSR/qars-integration/dry-run-CLS-to-QARS.md",
+    "Untitled.canvas",
+    "ncezid-bridge/DCLSR/qars-integration/flows.md",
+    "obsidian - Shortcut.lnk",
+    "obsidian/hotkeys.json",
+    "obsidian/core-plugins-migration.json",
+    "obsidian/daily-notes.json",
+    "obsidian/themes/Primary/manifest.json",
+    "obsidian/themes/Primary/theme.css",
+    "obsidian/themes/Primary",
+    "obsidian/themes/Things/theme.css",
+    "obsidian/themes/Things/manifest.json",
+    "ncezid-bridge/meetings/template.md",
+    "resource-hub/Login Info.md",
+    "personal/PTO Contact List.md",
+    "ncezid-bridge/meetings/2024-10-22.md",
+    "resource-hub/Tasks/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvdHAyNDctZWxlbWVudC0wMDMyLWt6b3hrZ28wLnBuZw.webp",
+    "resource-hub/Tasks/ARO CONFIG.md",
+    "resource-hub/Tasks/AMP Settings for RH.md",
+    "resource-hub/Tasks/tasks.md",
+    "archive/Grants UDO ML/To-do.md",
+    "ncezid-bridge/DCLSR/questions.md",
+    "ncezid-bridge/OneHealth/recordings.md",
+    "archive/career-pathing-hrsd/data-cleanup.md",
+    "archive/dme/To-do.md",
+    "DCLSR/erd.md",
+    "DCLSR/questions.md",
+    "DCLSR/Pasted image 20241009160659.png",
+    "archive/hermes/hermes dataflow.canvas",
+    "resource-hub/Tasks/Salesforce Connected App/logout flow.canvas",
+    "resource-hub/Tasks/Salesforce Connected App/login flow.canvas",
+    "resource-hub/Tasks/Salesforce Resource Ingress/Pasted image 20240306112651.png",
+    "resource-hub/Tasks/Salesforce Resource Ingress/Pasted image 20240306112643.png",
+    "resource-hub/Tasks/Salesforce Resource Ingress/Pasted image 20240306112630.png",
+    "resource-hub/Tasks/Salesforce Resource Ingress/Pasted image 20240306111202.png",
+    "resource-hub/2024-03-14 Demo/pre-refresh-screenshots/trending.png",
+    "resource-hub/2024-03-14 Demo/pre-refresh-screenshots/popular.png",
+    "resource-hub/2024-03-14 Demo/pre-refresh-screenshots/search.png",
+    "resource-hub/2024-03-14 Demo/pre-refresh-screenshots/myresources.png",
+    "HRSD Dashboard/ERD.canvas",
+    "Resource Hub/tasks/Salesforce Connected App/login flow.canvas",
+    "CDC Op Model Operations/usaspendingdataflow.canvas",
+    "HERMES/hermes dataflow.canvas",
+    "Resource Hub/tasks/Salesforce Connected App/logout flow.canvas",
+    "HERMES/map.canvas"
+  ]
+}
