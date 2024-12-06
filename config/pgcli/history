@@ -1,0 +1,186 @@
+
+# 2024-12-05 11:02:58.335764
++\d
+
+# 2024-12-05 11:03:22.734425
++\db
+
+# 2024-12-05 11:04:16.914699
++select * from ohzdp_workshop.final_disease_group
+
+# 2024-12-05 11:04:54.434957
++\d ohzdp_workshop ohzdp_workshop.final_disease_group
+
+# 2024-12-05 11:04:59.430239
++\d ohzdp_workshop.final_disease_group
+
+# 2024-12-05 11:05:43.842459
++\?
+
+# 2024-12-05 11:05:57.354563
++\dn
+
+# 2024-12-05 11:06:08.628732
++\d
+
+# 2024-12-05 11:06:40.469457
++\conninfo
+
+# 2024-12-05 11:07:19.391542
++select * from ohzdp_workshop.final_disease_group
+
+# 2024-12-05 11:07:52.384524
++select * from ohzdp_workshop.final_disease_group;
+
+# 2024-12-05 11:08:35.616347
++\?
+
+# 2024-12-05 11:08:41.678932
++\T
+
+# 2024-12-05 11:08:49.910388
++\T minimal
+
+# 2024-12-05 11:08:52.574135
++select * from ohzdp_workshop.final_disease_group;
+
+# 2024-12-05 11:09:06.283034
++\T csv 
+
+# 2024-12-05 11:09:12.061679
++select * from ohzdp_workshop.final_disease_group;
+
+# 2024-12-05 11:09:21.705232
++\T psql
+
+# 2024-12-05 11:09:24.446305
++select * from ohzdp_workshop.final_disease_group;
+
+# 2024-12-05 11:09:35.644578
++\?
+
+# 2024-12-05 11:09:45.557574
++\h
+
+# 2024-12-05 11:12:00.421301
++select * from ohzdp_workshop.final_disease_group 
++join ohzdp_workshop.final_disease ON final_disease.final_disease_group_id = final_disease_group.id 
++join ohzdp_workshop.disease ON disease.id = final_disease.disease_id;
+
+# 2024-12-05 11:13:47.469496
++select * from ohzdp_workshop.final_disease_group 
++join ohzdp_workshop.final_disease ON final_disease.final_disease_group_id = final_disease_group.id 
++join ohzdp_workshop.disease ON disease.id = final_disease.disease_id
++join app.disease_agent ON disease_agent.id = disease.disease_agent_id;
+
+# 2024-12-05 11:16:51.621050
++select fdg.*, fd.*, d.*, da.* from ohzdp_workshop.final_disease_group fdg 
++join ohzdp_workshop.final_disease fd ON fd.final_disease_group_id = fdg.id 
++join ohzdp_workshop.disease d ON d.id = fd.disease_id
++join app.disease_agent da ON da.id = d.disease_agent_idi
++join ohzdp_workshop.disease_list ON disease_list.id = d.disease_list_id
++where disease_list.workshop_id=102;
++
++
+
+# 2024-12-05 11:17:00.776507
++select fdg.*, fd.*, d.*, da.* from ohzdp_workshop.final_disease_group fdg 
++join ohzdp_workshop.final_disease fd ON fd.final_disease_group_id = fdg.id 
++join ohzdp_workshop.disease d ON d.id = fd.disease_id
++join app.disease_agent da ON da.id = d.disease_agent_id
++join ohzdp_workshop.disease_list ON disease_list.id = d.disease_list_id
++where disease_list.workshop_id=102;
++
++
+
+# 2024-12-05 11:19:07.397689
++select fdg.*, fd.*, d.*, da.* from ohzdp_workshop.final_disease_group fdg 
+
+# 2024-12-05 11:22:02.785084
++quit
+
+# 2024-12-05 11:25:20.966494
++
++select fdg.*, fd.*, d.*, da.* from ohzdp_workshop.final_disease_group fdg 
++join ohzdp_workshop.disease_list ON disease_list.id = d.disease_list_id
++join ohzdp_workshop.final_disease ON final_disease.final_disease_group_id = fdg.id;
+
+# 2024-12-05 11:26:08.128370
++
++select fdg.*, fd.*  from ohzdp_workshop.final_disease_group fdg 
++join ohzdp_workshop.final_disease fd ON final_disease.final_disease_group_id = fdg.id;
++join ohzdp_workshop.disease_list dl ON disease_list.id = fd.disease_list_id
+
+# 2024-12-05 11:26:26.389065
++
++select fdg.*, fd.*  from ohzdp_workshop.final_disease_group fdg 
++join ohzdp_workshop.final_disease fd ON fd.final_disease_group_id = fdg.id;
++join ohzdp_workshop.disease_list dl ON disease_list.id = fd.disease_list_id
+
+# 2024-12-05 11:26:47.868346
++
++select fdg.*, fd.*  from ohzdp_workshop.final_disease_group fdg 
++join ohzdp_workshop.final_disease fd ON fd.final_disease_group_id = fdg.id;
++join ohzdp_workshop.disease_list dl ON disease_list.id = fd.disease_list_id
++where disease_list.workshop_id=102;
+
+# 2024-12-05 11:27:04.671117
++
++select fdg.*, fd.*  from ohzdp_workshop.final_disease_group fdg 
++join ohzdp_workshop.final_disease fd ON fd.final_disease_group_id = fdg.id;
++join ohzdp_workshop.disease_list dl ON disease_list.id = fd.disease_list_id
++where dl.workshop_id=102;
+
+# 2024-12-05 11:27:33.036331
++select * from ohzdp_workshop.final_disease;
+
+# 2024-12-05 11:27:55.745248
++
++select fdg.*, fd.*  from ohzdp_workshop.final_disease_group fdg 
++join ohzdp_workshop.final_disease fd ON fd.final_disease_group_id = fdg.id
++join ohzdp_workshop.disease_list dl ON disease_list.id = fd.disease_list_id
++where dl.workshop_id=102;
+
+# 2024-12-05 11:28:13.389240
++
++select fdg.*, fd.*  from ohzdp_workshop.final_disease_group fdg 
++join ohzdp_workshop.final_disease fd ON fd.final_disease_group_id = fdg.id
++join ohzdp_workshop.disease_list dl ON dl.id = fd.disease_list_id
++where dl.workshop_id=102;
+
+# 2024-12-05 11:28:24.629639
++
++select fdg.*, fd.*  from ohzdp_workshop.final_disease_group fdg 
++join ohzdp_workshop.final_disease fd ON fd.final_disease_group_id = fdg.id
++join ohzdp_workshop.disease_list dl ON dl.id = fdg.disease_list_id
++where dl.workshop_id=102;
+
+# 2024-12-05 11:34:32.640824
++
++select fdg.*, fd.*  from ohzdp_workshop.final_disease_group fdg 
++join ohzdp_workshop.final_disease fd ON fd.final_disease_group_id = fdg.id
++join ohzdp_workshop.disease d ON d.id = fd.disease_id
++join ohzdp_workshop.disease_list dl ON dl.id = fdg.disease_list_id
++where dl.workshop_id=102;
+
+# 2024-12-05 11:35:01.007891
++
++select fdg.*, fd.* , d.* from ohzdp_workshop.final_disease_group fdg 
++join ohzdp_workshop.final_disease fd ON fd.final_disease_group_id = fdg.id
++join ohzdp_workshop.disease d ON d.id = fd.disease_id
++join ohzdp_workshop.disease_list dl ON dl.id = fdg.disease_list_id
++where dl.workshop_id=102;
+
+# 2024-12-05 11:47:18.922928
++quit
+
+# 2024-12-05 11:53:31.284335
++select fdg.*, fd.* , d.* from ohzdp_workshop.final_disease_group fdg 
++join ohzdp_workshop.final_disease fd ON fd.final_disease_group_id = fdg.id
++join ohzdp_workshop.disease d ON d.id = fd.disease_id
++join ohzdp_workshop.disease_list dl ON dl.id = fdg.disease_list_id
++where dl.workshop_id=102;
+
+# 2024-12-05 11:53:54.052918
++quit
++
