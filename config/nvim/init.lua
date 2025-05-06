@@ -1,5 +1,5 @@
-require 'core.options'  -- Load general options
-require 'core.keymaps'  -- Load general keymaps
+require 'core.options' -- Load general options
+require 'core.keymaps' -- Load general keymaps
 require 'core.snippets' -- Custom code snippets
 
 -- Install package manager
@@ -17,39 +17,36 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Import color theme based on environment variable NVIM_THEME
-local default_color_scheme = 'nord'
+local default_color_scheme = 'catppuccin'
 local env_var_nvim_theme = os.getenv 'NVIM_THEME' or default_color_scheme
 
 -- Define a table of theme modules
 local themes = {
   nord = 'plugins.themes.nord',
   onedark = 'plugins.themes.onedark',
+  catppuccin = 'plugins.themes.catppuccin',
 }
 
 -- Setup plugins
 require('lazy').setup({
   require(themes[env_var_nvim_theme]),
-  require 'plugins.telescope',
-  require 'plugins.treesitter',
-  require 'plugins.lsp',
+  require 'plugins.telescope', --for finding files and text
+  require 'plugins.treesitter', -- parses file structure
+  require 'plugins.nvim-tree', -- file browsing
+  require 'plugins.lsp', -- language server protocol, include mason
   require 'plugins.autocompletion',
-  require 'plugins.none-ls',
-  require 'plugins.lualine',
-  require 'plugins.bufferline',
-  require 'plugins.neo-tree',
-  require 'plugins.alpha',
-  require 'plugins.indent-blankline',
-  require 'plugins.lazygit',
-  require 'plugins.comment',
+  -- require 'plugins.none-ls',
+  require 'plugins.lualine', -- makes command line look nice
+  require 'plugins.bufferline', -- shows tab bar of open buffers
+  require 'plugins.alpha', -- start page
+  require 'plugins.indent-blankline', -- indents
+  require 'plugins.lazygit', -- requires Lazygit installed
+  require 'plugins.comment', -- to comment things in and out
   require 'plugins.debug',
   require 'plugins.gitsigns',
-  require 'plugins.database',
+  require 'plugins.database', -- helps with database stuff
   require 'plugins.misc',
-  require 'plugins.harpoon',
-  -- require 'plugins.avante',
-  -- require 'plugins.chatgpt',
   require 'plugins.aerial',
-  require 'plugins.vim-tmux-navigator',
 }, {
   ui = {
     -- If you have a Nerd Font, set icons to an empty table which will use the
@@ -71,6 +68,13 @@ require('lazy').setup({
     },
   },
 })
+
+-- Telescope Binds
+local builtin = require 'telescope.builtin'
+vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
+vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 
 -- Function to check if a file exists
 local function file_exists(file)
