@@ -38,4 +38,6 @@ eval "$(pyenv init -)"
 export PATH="$PATH:/opt/hombrew/bin"
 
 export LESS="-SRXF"
+export EDITOR='nvim'
+export VISUAL='nvim'
 
