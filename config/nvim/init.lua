@@ -17,7 +17,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Import color theme based on environment variable NVIM_THEME
-local default_color_scheme = 'catppuccin'
+local default_color_scheme = 'nord'
 local env_var_nvim_theme = os.getenv 'NVIM_THEME' or default_color_scheme
 
 -- Define a table of theme modules
@@ -30,23 +30,25 @@ local themes = {
 -- Setup plugins
 require('lazy').setup({
   require(themes[env_var_nvim_theme]),
-  require 'plugins.telescope', --for finding files and text
-  require 'plugins.treesitter', -- parses file structure
-  require 'plugins.nvim-tree', -- file browsing
-  require 'plugins.lsp', -- language server protocol, include mason
-  require 'plugins.autocompletion',
-  -- require 'plugins.none-ls',
-  require 'plugins.lualine', -- makes command line look nice
-  require 'plugins.bufferline', -- shows tab bar of open buffers
+  require 'plugins.aerial',
   require 'plugins.alpha', -- start page
-  require 'plugins.indent-blankline', -- indents
-  require 'plugins.lazygit', -- requires Lazygit installed
+  require 'plugins.autocompletion',
+  require 'plugins.bufferline', -- shows tab bar of open buffers
   require 'plugins.comment', -- to comment things in and out
+  require 'plugins.copilot', -- ghcp
+  require 'plugins.database', -- helps with database stuff
   require 'plugins.debug',
   require 'plugins.gitsigns',
-  require 'plugins.database', -- helps with database stuff
+  require 'plugins.indent-blankline', -- indents
+  require 'plugins.lazygit', -- requires Lazygit installed
+  require 'plugins.lsp', -- language server protocol, include mason
+  require 'plugins.lualine', -- makes command line look nice
   require 'plugins.misc',
-  require 'plugins.aerial',
+  require 'plugins.none-ls',
+  require 'plugins.nvim-tree', -- file browsing
+  require 'plugins.session', -- session management
+  require 'plugins.telescope', --for finding files and text
+  require 'plugins.treesitter', -- parses file structure
 }, {
   ui = {
     -- If you have a Nerd Font, set icons to an empty table which will use the
