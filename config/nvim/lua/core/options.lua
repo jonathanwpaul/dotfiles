@@ -18,7 +18,6 @@ vim.o.wrap = false                                   -- display lines as one lon
 vim.o.linebreak = true                               -- companion to wrap don't split words
 vim.o.scrolloff = 4                                  -- minimal number of screen lines to keep above and below the cursor
 vim.o.sidescrolloff = 8                              -- minimal number of screen columns either side of cursor if wrap is `false`
-vim.o.relativenumber = true                          -- set relative numbered lines
 vim.o.numberwidth = 4                                -- set number column width to 2 {default 4}
 vim.o.shiftwidth = 4                                 -- the number of spaces inserted for each indentation
 vim.o.tabstop = 4                                    -- insert n spaces for a tab
@@ -41,3 +40,21 @@ vim.opt.shortmess:append 'c'                         -- don't give |ins-completi
 vim.opt.iskeyword:append '-'                         -- hyphenated words recognized by searches
 vim.opt.formatoptions:remove { 'c', 'r', 'o' }       -- don't insert the current comment leader automatically for auto-wrapping comments using 'textwidth', hitting <Enter> in insert mode, or hitting 'o' or 'O' in normal mode.
 vim.opt.runtimepath:remove '/usr/share/vim/vimfiles' -- separate vim plugins from neovim in case vim still in use
+
+vim.api.nvim_create_autocmd({ 'BufEnter', 'FocusGained', 'InsertLeave', 'WinEnter' }, {
+  pattern = {},
+  callback = function(ev)
+    if vim.o.nu and vim.api.nvim_get_mode().mode ~= 'i' then
+      vim.o.relativenumber = true
+    end
+  end,
+})
+
+vim.api.nvim_create_autocmd({ 'BufLeave', 'FocusLost', 'InsertEnter', 'WinLeave' }, {
+  pattern = {},
+  callback = function(ev)
+    if vim.o.nu then
+      vim.o.relativenumber = false
+    end
+  end,
+})
