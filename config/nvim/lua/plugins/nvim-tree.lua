@@ -5,5 +5,16 @@ return {
   dependencies = {
     "nvim-tree/nvim-web-devicons",
   },
-  opts = {}
+  keys = {
+   { '\\', ':NvimTreeOpen<CR>', desc = 'NvimTree reveal', silent = true },
+  },
+  opts = {
+    filesystem = {
+      window = {
+        mappings = {
+          ['\\'] = 'close_window',
+        },
+      },
+    },
+  },
 }

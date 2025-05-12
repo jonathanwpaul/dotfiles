@@ -22,34 +22,18 @@ local env_var_nvim_theme = os.getenv 'NVIM_THEME' or default_color_scheme
 
 -- Define a table of theme modules
 local themes = {
-  nord = 'plugins.themes.nord',
-  onedark = 'plugins.themes.onedark',
-  catppuccin = 'plugins.themes.catppuccin',
+  nord = 'themes.nord',
+  onedark = 'themes.onedark',
+  catppuccin = 'themes.catppuccin',
 }
 
 -- Setup plugins
 require('lazy').setup({
-  require(themes[env_var_nvim_theme]),
-  require 'plugins.aerial',
-  require 'plugins.alpha', -- start page
-  require 'plugins.autocompletion',
-  require 'plugins.bufferline', -- shows tab bar of open buffers
-  require 'plugins.comment', -- to comment things in and out
-  require 'plugins.copilot', -- ghcp
-  require 'plugins.database', -- helps with database stuff
-  require 'plugins.debug',
-  require 'plugins.gitsigns',
-  require 'plugins.indent-blankline', -- indents
-  require 'plugins.lazygit', -- requires Lazygit installed
-  require 'plugins.lsp', -- language server protocol, include mason
-  require 'plugins.lualine', -- makes command line look nice
-  require 'plugins.misc',
-  require 'plugins.none-ls',
-  require 'plugins.nvim-tree', -- file browsing
-  require 'plugins.session', -- session management
-  require 'plugins.telescope', --for finding files and text
-  require 'plugins.treesitter', -- parses file structure
-}, {
+  spec = {
+    {import = 'plugins'},
+  {import = themes[env_var_nvim_theme]}
+  }
+,
   ui = {
     -- If you have a Nerd Font, set icons to an empty table which will use the
     -- default lazy.nvim defined Nerd Font icons otherwise define a unicode icons table
