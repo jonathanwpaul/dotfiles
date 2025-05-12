@@ -30,6 +30,43 @@ return {
     local cmp_lsp = require 'cmp_nvim_lsp'
     local capabilities = vim.tbl_deep_extend('force', {}, vim.lsp.protocol.make_client_capabilities(), cmp_lsp.default_capabilities())
 
+    vim.api.nvim_create_autocmd('LspAttach', {
+      group = vim.api.nvim_create_augroup('init_lsp', {}),
+      callback = function(e)
+        local opts = { buffer = e.buf }
+        vim.keymap.set('n', 'gd', function()
+          require('telescope.builtin').lsp_definitions()
+        end, opts)
+        vim.keymap.set('n', 'gr', function()
+          require('telescope.builtin').lsp_references()
+        end, opts)
+        vim.keymap.set('n', 'K', function()
+          vim.lsp.buf.hover()
+        end, opts)
+        vim.keymap.set('n', '<leader>vws', function()
+          require('telescope.builtin').lsp_workspace_symbols()
+        end, opts)
+        vim.keymap.set('n', '<leader>vd', function()
+          vim.diagnostic.open_float()
+        end, opts)
+        vim.keymap.set('n', '<leader>vca', function()
+          vim.lsp.buf.code_action()
+        end, opts)
+        vim.keymap.set('n', '<leader>vrn', function()
+          vim.lsp.buf.rename()
+        end, opts)
+        vim.keymap.set('i', '<C-h>', function()
+          vim.lsp.buf.signature_help()
+        end, opts)
+        vim.keymap.set('n', '[d', function()
+          vim.diagnostic.goto_next()
+        end, opts)
+        vim.keymap.set('n', ']d', function()
+          vim.diagnostic.goto_prev()
+        end, opts)
+      end,
+    })
+
     require('fidget').setup {}
     require('mason').setup()
     require('mason-lspconfig').setup {

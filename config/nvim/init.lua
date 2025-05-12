@@ -28,12 +28,11 @@ local themes = {
 }
 
 -- Setup plugins
-require('lazy').setup({
+require('lazy').setup {
   spec = {
-    {import = 'plugins'},
-  {import = themes[env_var_nvim_theme]}
-  }
-,
+    { import = 'plugins' },
+    { import = themes[env_var_nvim_theme] },
+  },
   ui = {
     -- If you have a Nerd Font, set icons to an empty table which will use the
     -- default lazy.nvim defined Nerd Font icons otherwise define a unicode icons table
@@ -53,7 +52,7 @@ require('lazy').setup({
       lazy = '💤 ',
     },
   },
-})
+}
 
 -- Telescope Binds
 local builtin = require 'telescope.builtin'
