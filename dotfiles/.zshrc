@@ -10,6 +10,9 @@ antigen bundle pip
 antigen bundle lein
 antigen bundle command-not-found
 
+# ghcp
+antigen bundle loiccoyle/zsh-github-copilot@main
+
 # autosuggestions
 antigen bundle zsh-users/zsh-autosuggestions
 
@@ -41,3 +44,5 @@ export LESS="-SRXF"
 export EDITOR='nvim'
 export VISUAL='nvim'
 
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

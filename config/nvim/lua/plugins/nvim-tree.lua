@@ -6,15 +6,8 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
   keys = {
-   { '\\', ':NvimTreeOpen<CR>', desc = 'NvimTree reveal', silent = true },
+    { '\\', ':NvimTreeOpen<CR>', desc = 'NvimTree reveal', silent = true },
   },
   opts = {
-    filesystem = {
-      window = {
-        mappings = {
-          ['\\'] = 'close_window',
-        },
-      },
-    },
   },
 }
