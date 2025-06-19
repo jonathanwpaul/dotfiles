@@ -40,13 +40,13 @@ vim.keymap.set('n', 'N', 'Nzzzv')
 -- Resize with arrows
 -- vim.keymap.set('n', '<Up>', ':resize -2<CR>', opts)
 -- vim.keymap.set('n', '<Down>', ':resize +2<CR>', opts)
--- vim.keymap.set('n', '<Left>', ':vertical resize -2<CR>', opts)
--- vim.keymap.set('n', '<Right>', ':vertical resize +2<CR>', opts)
+vim.keymap.set('n', '<Left>', ':vertical resize -2<CR>', opts)
+vim.keymap.set('n', '<Right>', ':vertical resize +2<CR>', opts)
 
 -- Buffers
 vim.keymap.set('n', '<Tab>', ':bnext<CR>', opts)
 vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>', opts)
-vim.keymap.set('n', '<leader>x', ':Bdelete!<CR>', opts) -- close buffer
+vim.keymap.set('n', '<leader>q', ':Bdelete!<CR>', opts) -- close buffer
 vim.keymap.set('n', '<leader>b', '<cmd> enew <CR>', opts) -- new buffer
 
 -- Increment/decrement numbers
@@ -97,7 +97,7 @@ vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]])
 vim.keymap.set('n', '<leader>Y', [["+Y]])
 
 -- substitute using current word
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set('n', '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Toggle diagnostics
 local diagnostics_active = true

@@ -28,59 +28,70 @@ local themes = {
   nightfox = 'themes.nightfox',
 }
 
--- Setup plugins
-require('lazy').setup {
-  spec = {
-    { import = 'plugins' },
-    { import = themes[env_var_nvim_theme] },
-  },
-  ui = {
-    -- If you have a Nerd Font, set icons to an empty table which will use the
-    -- default lazy.nvim defined Nerd Font icons otherwise define a unicode icons table
-    icons = vim.g.have_nerd_font and {} or {
-      cmd = '⌘',
-      config = '🛠',
-      event = '📅',
-      ft = '📂',
-      init = '⚙',
-      keys = '🗝',
-      plugin = '🔌',
-      runtime = '💻',
-      require = '🌙',
-      source = '📄',
-      start = '🚀',
-      task = '📌',
-      lazy = '💤 ',
+if vim.g.vscode then
+  -- VSCode Neovim
+  require 'core.vscode_keymaps'
+  require('lazy').setup {
+    { import = 'plugins.motions' },
+  }
+else
+  -- Ordinary Neovim
+
+  -- Setup plugins
+  require('lazy').setup {
+    spec = {
+      { import = 'plugins' },
+      { import = themes[env_var_nvim_theme] },
     },
-  },
-}
+    ui = {
+      -- If you have a Nerd Font, set icons to an empty table which will use the
+      -- default lazy.nvim defined Nerd Font icons otherwise define a unicode icons table
+      icons = vim.g.have_nerd_font and {} or {
+        cmd = '⌘',
+        config = '🛠',
+        event = '📅',
+        ft = '📂',
+        init = '⚙',
+        keys = '🗝',
+        plugin = '🔌',
+        runtime = '💻',
+        require = '🌙',
+        source = '📄',
+        start = '🚀',
+        task = '📌',
+        lazy = '💤 ',
+      },
+    },
+  }
 
--- Telescope Binds
-local builtin = require 'telescope.builtin'
-vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
-vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+  -- Telescope Binds
+  local builtin = require 'telescope.builtin'
+  vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+  vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
+  vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
+  vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 
--- Function to check if a file exists
-local function file_exists(file)
-  local f = io.open(file, 'r')
-  if f then
-    f:close()
-    return true
-  else
-    return false
+  -- Function to check if a file exists
+  local function file_exists(file)
+    local f = io.open(file, 'r')
+    if f then
+      f:close()
+      return true
+    else
+      return false
+    end
   end
+
+  -- Path to the session file
+  local session_file = '.session.vim'
+
+  -- Check if the session file exists in the current directory
+  if file_exists(session_file) then
+    -- Source the session file
+    vim.cmd('source ' .. session_file)
+  end
+
+  -- The line beneath this is called `modeline`. See `:help modeline`
+  -- vim: ts=2 sts=2 sw=2 et
+  --
 end
-
--- Path to the session file
-local session_file = '.session.vim'
-
--- Check if the session file exists in the current directory
-if file_exists(session_file) then
-  -- Source the session file
-  vim.cmd('source ' .. session_file)
-end
-
--- The line beneath this is called `modeline`. See `:help modeline`
--- vim: ts=2 sts=2 sw=2 et
