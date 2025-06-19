@@ -1,14 +1,3 @@
-local root_files = {
-  '.luarc.json',
-  '.luarc.jsonc',
-  '.luacheckrc',
-  '.stylua.toml',
-  'stylua.toml',
-  'selene.toml',
-  'selene.yml',
-  '.git',
-}
-
 return {
   'neovim/nvim-lspconfig',
   dependencies = {
@@ -29,25 +18,20 @@ return {
     local cmp = require 'cmp'
     local cmp_lsp = require 'cmp_nvim_lsp'
     local capabilities = vim.tbl_deep_extend('force', {}, vim.lsp.protocol.make_client_capabilities(), cmp_lsp.default_capabilities())
+    local telescope = require 'telescope.builtin'
 
     vim.api.nvim_create_autocmd('LspAttach', {
       group = vim.api.nvim_create_augroup('init_lsp', {}),
       callback = function(e)
         local opts = { buffer = e.buf }
         vim.keymap.set('n', 'gd', function()
-          require('telescope.builtin').lsp_definitions()
+          telescope.lsp_definitions()
         end, opts)
         vim.keymap.set('n', 'gr', function()
-          require('telescope.builtin').lsp_references()
+          telescope.lsp_references()
         end, opts)
-        vim.keymap.set('n', 'K', function()
+        vim.keymap.set('n', '<C-Space>', function()
           vim.lsp.buf.hover()
-        end, opts)
-        vim.keymap.set('n', '<leader>vws', function()
-          require('telescope.builtin').lsp_workspace_symbols()
-        end, opts)
-        vim.keymap.set('n', '<leader>vd', function()
-          vim.diagnostic.open_float()
         end, opts)
         vim.keymap.set('n', '<leader>vca', function()
           vim.lsp.buf.code_action()

@@ -33,6 +33,8 @@ if vim.g.vscode then
   require 'core.vscode_keymaps'
   require('lazy').setup {
     { import = 'plugins.motions' },
+    { import = 'plugins.surround' },
+    { import = 'plugins.undotree' },
   }
 else
   -- Ordinary Neovim
@@ -64,13 +66,6 @@ else
     },
   }
 
-  -- Telescope Binds
-  local builtin = require 'telescope.builtin'
-  vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
-  vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
-  vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
-  vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
-
   -- Function to check if a file exists
   local function file_exists(file)
     local f = io.open(file, 'r')
@@ -91,7 +86,42 @@ else
     vim.cmd('source ' .. session_file)
   end
 
-  -- The line beneath this is called `modeline`. See `:help modeline`
-  -- vim: ts=2 sts=2 sw=2 et
   --
+  -- Telescope verbose map
+  local pickers = require 'telescope.pickers'
+  local finders = require 'telescope.finders'
+  local conf = require('telescope.config').values
+  local actions = require 'telescope.actions'
+  local action_state = require 'telescope.actions.state'
+
+  local function get_verbose_maps()
+    local maps = vim.api.nvim_exec2('verbose map', { output = true }).output
+    local lines = {}
+    for line in maps:gmatch '[^\r\n]+' do
+      table.insert(lines, line)
+    end
+    return lines
+  end
+
+  local function verbose_maps_picker()
+    pickers
+      .new({}, {
+        prompt_title = 'Verbose Keymaps',
+        finder = finders.new_table {
+          results = get_verbose_maps(),
+        },
+        sorter = conf.generic_sorter {},
+        attach_mappings = function(prompt_bufnr, map)
+          actions.select_default:replace(function()
+            actions.close(prompt_bufnr)
+          end)
+          return true
+        end,
+      })
+      :find()
+  end
+
+  vim.api.nvim_create_user_command('TelescopeVerboseMaps', verbose_maps_picker, {}) --
 end
+-- The line beneath this is called `modeline`. See `:help modeline`
+-- vim: ts=2 sts=2 sw=2 et
