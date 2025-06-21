@@ -64,6 +64,13 @@ return {
             capabilities = capabilities,
           }
         end,
+        clangd = function()
+          require('lspconfig').clangd.setup {
+            arguments = { '--compile-commands-dir=.' },
+            capabilities = capabilities,
+            -- Optionally, add more settings here
+          }
+        end,
 
         zls = function()
           local lspconfig = require 'lspconfig'
