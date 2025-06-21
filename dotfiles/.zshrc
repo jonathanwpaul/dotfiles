@@ -44,5 +44,7 @@ export LESS="-SRXF"
 export EDITOR='nvim'
 export VISUAL='nvim'
 
+#needed for platformio
+export PATH=$PATH:$HOME/.platformio/penv/bin
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
