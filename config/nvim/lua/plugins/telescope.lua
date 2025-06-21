@@ -34,6 +34,7 @@ return {
           },
           n = {
             ['q'] = actions.close,
+            ['H'] = actions.toggle_hidden,
           },
         },
       },

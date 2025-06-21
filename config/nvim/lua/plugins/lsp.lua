@@ -48,6 +48,9 @@ return {
         vim.keymap.set('n', ']d', function()
           vim.diagnostic.goto_prev()
         end, opts)
+        vim.keymap.set('n', 'K', function()
+          vim.diagnostic.open_float()
+        end, opts)
       end,
     })
 
@@ -122,9 +125,9 @@ return {
         end,
       },
       mapping = cmp.mapping.preset.insert {
-        ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
-        ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-        ['<C-y>'] = cmp.mapping.confirm { select = true },
+        -- ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
+        -- ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
+        -- ['<expand>'] = cmp.mapping.confirm { select = true },
         ['<C-Space>'] = cmp.mapping.complete(),
       },
       sources = cmp.config.sources({
