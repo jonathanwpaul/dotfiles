@@ -3,6 +3,8 @@
 sudo apt install zsh
 chsh -s $(which zsh)
 
+cd "$(dirname "${BASH_SOURCE[0]}")"
+
 # for the files in this dir, add a symlink to the home dir
 for i in $(ls); do 
 	echo "$(pwd)/$i"; 
@@ -15,9 +17,9 @@ source "$HOME"/antigen.zsh
 
 # install starship theming
 curl -sS https://starship.rs/install.sh | sh
-mkdir -p ~/.config && touch ~/.config/starship.toml
-#starship preset gruvbox-rainbow -o ~/.config/starship.toml
-starship preset jetpack -o ~/.config/starship.toml
+# mkdir -p ~/.config && touch ~/.config/starship.toml
+# starship preset gruvbox-rainbow -o ~/.config/starship.toml
+# starship preset jetpack -o ~/.config/starship.toml
 
 # pyenv
 curl -fsSL https://pyenv.run | bash
