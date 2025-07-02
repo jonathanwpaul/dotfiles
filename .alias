@@ -20,6 +20,7 @@ alias piodm='pio device monitor'
 # -------------------------------------------------------------------
 # Git
 # -------------------------------------------------------------------
+alias lg='lazygit'
 alias ga='git add'
 alias gap='git add -p'
 alias gp='git push'
