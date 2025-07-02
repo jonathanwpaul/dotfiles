@@ -10,6 +10,9 @@ antigen bundle pip
 antigen bundle lein
 antigen bundle command-not-found
 
+# alias
+antigen bundle djui/alias-tips
+
 # ghcp
 antigen bundle loiccoyle/zsh-github-copilot@main
 
