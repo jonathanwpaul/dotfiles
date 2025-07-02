@@ -15,7 +15,7 @@ alias ghe='gh copilot explain'
 # Platformio
 alias piob='pio run'
 alias piou='pio run -t upload'
-alias piodm='pio device monitor'
+alias piom='pio device monitor'
 
 # -------------------------------------------------------------------
 # Git
