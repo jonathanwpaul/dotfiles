@@ -23,13 +23,13 @@ return {
         htop:toggle()
       end
 
-      vim.keymap.set('n', '<leader><leader>th', '<cmd>lua Htop_toggle()<CR>', {
+      vim.keymap.set('n', '<leader>th', '<cmd>lua Htop_toggle()<CR>', {
         noremap = true,
         silent = true,
         desc = 'toggle htop',
       })
 
-      vim.keymap.set('n', '<leader><leader>tf', '<Cmd>ToggleTerm direction=float<CR>', { desc = 'toggle floating terminal' })
+      vim.keymap.set('n', '<leader>tf', '<Cmd>ToggleTerm direction=float<CR>', { desc = 'toggle floating terminal' })
 
       -- vim.keymap.set("n", "<leader><leader>ts",
       -- 	"<Cmd>ToggleTerm direction=horizontal size=30<CR>",
