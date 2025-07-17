@@ -38,6 +38,7 @@ return {
             request = 'attach',
             name = 'Attach',
             processId = require('dap.utils').pick_process,
+            port = 9229,
             cwd = vim.fn.getcwd(),
             sourceMaps = true,
           },
@@ -104,6 +105,24 @@ return {
           require('dap').continue()
         end,
         desc = 'Run with Args',
+      },
+      {
+        '<F5>',
+        function()
+          require('dap').continue()
+        end,
+      },
+      {
+        '<F9>',
+        function()
+          require('dap').toggle_breakpoint()
+        end,
+      },
+      {
+        '<F10>',
+        function()
+          require('dap').step_over()
+        end,
       },
     },
     dependencies = {
