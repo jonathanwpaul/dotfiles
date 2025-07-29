@@ -9,6 +9,9 @@ return {
           border = 'curved',
           width = 150,
         },
+        start_in_insert = true,
+        insert_mappings = true,
+        terminal_mappings = true,
       }
 
       local Terminal = require('toggleterm.terminal').Terminal
@@ -23,13 +26,13 @@ return {
         htop:toggle()
       end
 
-      vim.keymap.set('n', '<leader>th', '<cmd>lua Htop_toggle()<CR>', {
+      vim.keymap.set({ 'n', 't' }, '<leader>th', '<cmd>lua Htop_toggle()<CR>', {
         noremap = true,
         silent = true,
         desc = 'toggle htop',
       })
 
-      vim.keymap.set('n', '<leader>tf', '<Cmd>ToggleTerm direction=float<CR>', { desc = 'toggle floating terminal' })
+      vim.keymap.set({ 'n', 't' }, '<leader>tf', '<Cmd>ToggleTerm direction=float<CR>', { desc = 'toggle floating terminal' })
 
       -- vim.keymap.set("n", "<leader><leader>ts",
       -- 	"<Cmd>ToggleTerm direction=horizontal size=30<CR>",
