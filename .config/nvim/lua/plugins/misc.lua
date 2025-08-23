@@ -3,6 +3,7 @@ return {
   {
     -- autoclose tags
     'windwp/nvim-ts-autotag',
+    enabled = false,
   },
   {
     -- detect tabstop and shiftwidth automatically
@@ -37,6 +38,7 @@ return {
   {
     -- Autoclose parentheses, brackets, quotes, etc.
     'windwp/nvim-autopairs',
+    enabled = false,
     event = 'InsertEnter',
     config = true,
     opts = {},

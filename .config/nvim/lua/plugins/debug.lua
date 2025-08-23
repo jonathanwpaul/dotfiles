@@ -323,7 +323,7 @@ return {
       -- },
       {
         'Joakker/lua-json5',
-        build = './install.ps1',
+        build = 'install.sh',
       },
     },
   },

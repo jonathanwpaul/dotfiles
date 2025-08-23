@@ -8,7 +8,7 @@ return {
           blend = -0.1,
         },
         scratchPad = {
-          enabled = true,
+          enabled = false,
           fileName = 'clipboard',
           location = '~/',
         },
