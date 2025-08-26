@@ -17,11 +17,12 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Import color theme based on environment variable NVIM_THEME
-local default_color_scheme = 'nightfox'
+local default_color_scheme = 'rosepine'
 local env_var_nvim_theme = os.getenv 'NVIM_THEME' or default_color_scheme
 
 -- Define a table of theme modules
 local themes = {
+  rosepine = 'themes.rose-pine',
   nord = 'themes.nord',
   onedark = 'themes.onedark',
   catppuccin = 'themes.catppuccin',
