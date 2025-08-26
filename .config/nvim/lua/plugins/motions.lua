@@ -6,7 +6,7 @@ return {
       {
         'w',
         '<Plug>CamelCaseMotion_w',
-        mode = { 'n', 'o' },
+        mode = { 'n', 'o', 'v' },
         noremap = true,
         silent = true,
         -- move to the start of the next word
@@ -14,7 +14,7 @@ return {
       {
         'b',
         '<Plug>CamelCaseMotion_b',
-        mode = { 'n', 'o' },
+        mode = { 'n', 'o', 'v' },
         noremap = true,
         silent = true,
         -- move to the start of the previous word
@@ -22,7 +22,7 @@ return {
       {
         'e',
         '<Plug>CamelCaseMotion_e',
-        mode = { 'n', 'o' },
+        mode = { 'n', 'o', 'v' },
         noremap = true,
         silent = true,
         -- move to the end of the next word
@@ -30,7 +30,7 @@ return {
       {
         'ge',
         '<Plug>CamelCaseMotion_ge',
-        mode = { 'n', 'o' },
+        mode = { 'n', 'o', 'v' },
         noremap = true,
         silent = true,
         -- move to the end of the previous word
