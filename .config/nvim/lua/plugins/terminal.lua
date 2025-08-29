@@ -32,7 +32,7 @@ return {
         desc = 'toggle htop',
       })
 
-      vim.keymap.set({ 'n', 't' }, '<leader>t', '<Cmd>ToggleTerm direction=float<CR>', { desc = 'toggle floating terminal' })
+      vim.keymap.set({ 'n', 't' }, '<leader>to', '<Cmd>ToggleTerm direction=float<CR>', { desc = 'toggle floating terminal' })
 
       -- vim.keymap.set("n", "<leader><leader>ts",
       -- 	"<Cmd>ToggleTerm direction=horizontal size=30<CR>",
