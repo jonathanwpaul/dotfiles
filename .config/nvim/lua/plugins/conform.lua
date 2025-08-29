@@ -3,10 +3,7 @@ return {
   opts = {},
   config = function()
     require('conform').setup {
-      format_on_save = {
-        -- These options will be passed to conform.format()
-        timeout_ms = 2500,
-      },
+      format_after_save = { lsp_format = 'fallback' },
       formatters_by_ft = {
         lua = { 'stylua' },
         python = { 'isort', 'black' },
