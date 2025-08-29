@@ -42,28 +42,28 @@ return {
     'fedepujol/move.nvim',
     keys = {
       {
-        '<A-j>',
+        '<M-j>',
         ':MoveLine(1)<CR>',
         mode = 'n',
         noremap = true,
         silent = true,
       },
       {
-        '<A-k>',
+        '<M-k>',
         ':MoveLine(-1)<CR>',
         mode = 'n',
         noremap = true,
         silent = true,
       },
       {
-        '<A-j>',
+        '<M-j>',
         ':MoveBlock(1)<CR>',
         mode = 'v',
         noremap = true,
         silent = true,
       },
       {
-        '<A-k>',
+        '<M-k>',
         ':MoveBlock(-1)<CR>',
         mode = 'v',
         noremap = true,

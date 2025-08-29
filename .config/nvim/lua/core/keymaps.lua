@@ -122,5 +122,5 @@ vim.keymap.set('n', '<leader>ms', ':mksession! .session.vim<CR>', { noremap = tr
 vim.keymap.set('n', '<leader>sl', ':source .session.vim<CR>', { noremap = true, silent = false })
 
 vim.keymap.set('n', '<leader>fo', function()
-  require('conform').format { bufnr = 0 }
+  require('conform').format { async = true, lsp_fallback = true, bufnr = 0 }
 end)
