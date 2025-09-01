@@ -1,18 +1,24 @@
-alias downloads='~/Downloads/'
-alias documents='~/Documents/'
-alias desktop='~/Desktop/'
-alias dcpc='~/Documents/dev/dcpc'
-alias dev='~/Documents/dev'
-alias n='nvim'
-alias notes='~/OneDrive/OneDrive\ -\ Deloitte\ \(O365D\)/notes'
-alias onedrive='~/Library/CloudStorage/OneDrive-Deloitte\(O365D\)'
-alias oh='~/Documents/dev/one-health'
+alias pls='sudo'
 
+# -------------------------------------------------------------------
+# docker
+# -------------------------------------------------------------------
+alias dcu='docker compose up -d'
+alias dcd='docker compose down'
+alias dcl='docker compose logs'
+alias dcp='docker container prune'
+alias dip='docker image prune'
+alias dps='docker ps -a'
+
+# -------------------------------------------------------------------
 # Github Copilot
+# -------------------------------------------------------------------
 alias ghs='gh copilot suggest'
 alias ghe='gh copilot explain'
 
+# -------------------------------------------------------------------
 # Platformio
+# -------------------------------------------------------------------
 alias piob='pio run'
 alias piou='pio run -t upload'
 alias piom='pio device monitor'
