@@ -238,6 +238,7 @@ return {
 
       -- Set keymaps to control the debugger
       vim.keymap.set('n', '<F5>', require('dap').continue)
+      vim.keymap.set('n', '<F9>', require('dap').toggle_breakpoint)
       vim.keymap.set('n', '<F10>', require('dap').step_over)
       vim.keymap.set('n', '<F11>', require('dap').step_into)
       vim.keymap.set('n', '<F12>', require('dap').step_out)
