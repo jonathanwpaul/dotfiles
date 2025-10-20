@@ -16,8 +16,21 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- Check if 'pwsh' (PowerShell Core) is executable and set the shell accordingly
+if vim.fn.executable 'pwsh' == 1 then
+  vim.o.shell = 'pwsh'
+elseif vim.fn.executable 'powershell' == 1 then
+  -- Fallback to Windows PowerShell if pwsh is not found
+  vim.o.shell = 'powershell'
+else
+  vim.o.shell = 'zsh'
+end
+
+-- Optional: Set shell command flags for better behavior with PowerShell
+vim.o.shellcmdflag =
+  "-NoLogo -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new();$PSDefaultParameterValues['Out-File:Encoding']='utf8';"
 -- Import color theme based on environment variable NVIM_THEME
-local default_color_scheme = 'rosepine'
+local default_color_scheme = 'catppuccin'
 local env_var_nvim_theme = os.getenv 'NVIM_THEME' or default_color_scheme
 
 -- Define a table of theme modules
