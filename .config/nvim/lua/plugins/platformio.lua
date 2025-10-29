@@ -42,7 +42,7 @@ return {
         -- If you pick clangd, it also creates compile_commands.json
 
         -- Uncomment out following line to enable platformio menu.
-        -- menu_key = '<leader>\\', -- replace this menu key  to your convenience
+        menu_key = '<leader>p', -- replace this menu key  to your convenience
         menu_name = 'PlatformIO', -- replace this menu name to your convenience
 
         -- Following are the default keybindings, you can overwrite them in the config

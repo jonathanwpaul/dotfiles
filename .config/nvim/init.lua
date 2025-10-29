@@ -18,17 +18,16 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Check if 'pwsh' (PowerShell Core) is executable and set the shell accordingly
 if vim.fn.executable 'pwsh' == 1 then
+  vim.opt.shellcmdflag = '-NoExit -Command'
   vim.o.shell = 'pwsh'
 elseif vim.fn.executable 'powershell' == 1 then
   -- Fallback to Windows PowerShell if pwsh is not found
+  vim.opt.shellcmdflag = '-NoExit -Command'
   vim.o.shell = 'powershell'
 else
   vim.o.shell = 'zsh'
 end
 
--- Optional: Set shell command flags for better behavior with PowerShell
-vim.o.shellcmdflag =
-  "-NoLogo -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new();$PSDefaultParameterValues['Out-File:Encoding']='utf8';"
 -- Import color theme based on environment variable NVIM_THEME
 local default_color_scheme = 'catppuccin'
 local env_var_nvim_theme = os.getenv 'NVIM_THEME' or default_color_scheme
@@ -48,6 +47,18 @@ if vim.g.neovide then
   vim.g.neovide_refresh_rate = 144
   vim.g.neovide_refresh_rate_idle = 5
   vim.g.neovide_fullscreen = true
+  vim.o.guifont = 'CaskaydiaCove Nerd Font'
+
+  vim.g.neovide_scale_factor = 1.0
+  local change_scale_factor = function(delta)
+    vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * delta
+  end
+  vim.keymap.set('n', '<C-=>', function()
+    change_scale_factor(1.1)
+  end)
+  vim.keymap.set('n', '<C-->', function()
+    change_scale_factor(1 / 1.1)
+  end)
 end
 
 if vim.g.vscode then
