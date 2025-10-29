@@ -9,6 +9,7 @@ return {
     local platformioRootDir = (vim.fn.filereadable 'platformio.ini' == 1) and vim.fn.getcwd() or nil
     if platformioRootDir and vim.fs.find('.pio', { path = platformioRootDir, type = 'directory' })[1] then
       -- if platformio.ini file and .pio folder exist in cwd, enable plugin to install plugin (if not istalled) and load it.
+      vim.notify('found platformio project')
       vim.g.platformioRootDir = platformioRootDir
     elseif (vim.uv or vim.loop).fs_stat(vim.fn.stdpath 'data' .. '/lazy/nvim-platformio.lua') == nil then
       -- if nvim-platformio not installed, enable plugin to install it first time
@@ -43,7 +44,7 @@ return {
 
         -- Uncomment out following line to enable platformio menu.
         menu_key = '<leader>p',   -- replace this menu key  to your convenience
-        menu_name = 'PlatformIO', -- replace this menu name to your convenience
+        menu_name = 'platformio', -- replace this menu name to your convenience
 
         -- Following are the default keybindings, you can overwrite them in the config
         menu_bindings = {
