@@ -17,7 +17,8 @@ return {
   config = function()
     local cmp = require 'cmp'
     local cmp_lsp = require 'cmp_nvim_lsp'
-    local capabilities = vim.tbl_deep_extend('force', {}, vim.lsp.protocol.make_client_capabilities(), cmp_lsp.default_capabilities())
+    local capabilities = vim.tbl_deep_extend('force', {}, vim.lsp.protocol.make_client_capabilities(),
+      cmp_lsp.default_capabilities())
     local telescope = require 'telescope.builtin'
 
     vim.api.nvim_create_autocmd('LspAttach', {
@@ -75,29 +76,6 @@ return {
             capabilities = capabilities,
           }
         end,
-        clangd = function()
-          require('lspconfig').clangd.setup {
-            arguments = { '--compile-commands-dir=.' },
-            capabilities = capabilities,
-            -- Optionally, add more settings here
-          }
-        end,
-
-        -- zls = function()
-        --   local lspconfig = require 'lspconfig'
-        --   lspconfig.zls.setup {
-        --     root_dir = lspconfig.util.root_pattern('.git', 'build.zig', 'zls.json'),
-        --     settings = {
-        --       zls = {
-        --         enable_inlay_hints = true,
-        --         enable_snippets = true,
-        --         warn_style = true,
-        --       },
-        --     },
-        --   }
-        --   vim.g.zig_fmt_parse_errors = 0
-        --   vim.g.zig_fmt_autosave = 0
-        -- end,
         lua_ls = function()
           local lspconfig = require 'lspconfig'
           lspconfig.lua_ls.setup {
@@ -124,6 +102,20 @@ return {
       },
     }
 
+    vim.lsp.config("ccls", {
+      init_options = {
+        diagnostics = {
+          onChange = 100,
+        },
+      },
+    })
+    vim.lsp.enable('ccls')
+
+    -- Optional: Fallback to clangd if .ccls doesn't exist
+    if vim.fn.filereadable(vim.uv.cwd() .. "/.ccls") == 0 then
+      vim.lsp.enable("clangd")
+    end
+
     local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
     cmp.setup {
@@ -140,8 +132,8 @@ return {
       },
       sources = cmp.config.sources({
         { name = 'nvim_lsp', group_index = 1 },
-        { name = 'copilot', group_index = 2 },
-        { name = 'luasnip', group_index = 3 }, -- For luasnip users.
+        { name = 'copilot',  group_index = 2 },
+        { name = 'luasnip',  group_index = 3 }, -- For luasnip users.
       }, {
         { name = 'buffer' },
       }),

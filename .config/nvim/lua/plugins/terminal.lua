@@ -32,15 +32,9 @@ return {
         desc = 'toggle htop',
       })
 
-      vim.keymap.set({ 'n', 't' }, '<leader>to', '<Cmd>ToggleTerm direction=float<CR>', { desc = 'toggle floating terminal' })
-
-      -- vim.keymap.set("n", "<leader><leader>ts",
-      -- 	"<Cmd>ToggleTerm direction=horizontal size=30<CR>",
-      -- 	{ desc = "open split terminal" })
-      --
-      -- vim.keymap.set("n", "<leader><leader>tv",
-      -- 	"<Cmd>ToggleTerm direction=vertical size=120<CR>",
-      -- 	{ desc = "open vertical terminal" })
+      vim.keymap.set({ 'n', 't' }, '<leader>tz', '<Cmd>ToggleTerm direction=float<CR>', { desc = 'toggle floating terminal' })
+      vim.keymap.set({ 'n', 't' }, '<leader>tzh', '<Cmd>ToggleTerm direction=horizontal size=30<CR>', { desc = 'open split terminal' })
+      vim.keymap.set({ 'n', 't' }, '<leader>tzv', '<Cmd>ToggleTerm direction=vertical size=120<CR>', { desc = 'open vertical terminal' })
 
       vim.api.nvim_create_user_command('Ts', function(opts)
         -- Split arguments
