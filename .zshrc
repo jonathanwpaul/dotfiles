@@ -51,3 +51,11 @@ export VISUAL='nvim'
 export PATH=$PATH:$HOME/.platformio/penv/bin
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# pnpm
+export PNPM_HOME="/Users/jonpaul/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
