@@ -67,7 +67,6 @@ if vim.g.vscode then
   require('lazy').setup {
     { import = 'plugins.motions' },
     { import = 'plugins.surround' },
-    { import = 'plugins.undotree' },
   }
 else
   -- Ordinary Neovim
