@@ -29,7 +29,7 @@ else
 end
 
 -- Import color theme based on environment variable NVIM_THEME
-local default_color_scheme = 'catppuccin'
+local default_color_scheme = 'rosepine'
 local env_var_nvim_theme = os.getenv 'NVIM_THEME' or default_color_scheme
 
 -- Define a table of theme modules
