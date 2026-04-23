@@ -69,12 +69,14 @@ return {
       ensure_installed = {
         'ts_ls',
         'lua_ls',
+        'jsonls',
       },
       handlers = {
         function(server_name) -- default handler (optional)
           vim.lsp.config(server_name, {
             capabilities = capabilities,
           })
+          vim.lsp.enable(server_name)
         end,
         lua_ls = function()
             vim.lsp.config('lua_ls', {
@@ -97,6 +99,7 @@ return {
               },
             },
           })
+          vim.lsp.enable('lua_ls')
         end,
       },
     }
