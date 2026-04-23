@@ -6,11 +6,12 @@ return {
       format_after_save = { lsp_format = 'fallback' },
       formatters_by_ft = {
         lua = { 'stylua' },
-        python = { 'isort', 'black' },
+        python = { 'black' },
         typescript = { 'prettierd', 'prettier', stop_after_first = true },
         typescriptreact = { 'prettierd', 'prettier', stop_after_first = true },
         javascript = { 'prettierd', 'prettier', stop_after_first = true },
         javascriptreact = { 'prettierd', 'prettier', stop_after_first = true },
+        json = { 'prettierd' },
         yaml = { 'yamlfix', 'prettierd', 'prettier', stop_after_first = true },
         xml = { 'xmlformatter' },
       },
