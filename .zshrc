@@ -63,16 +63,13 @@ export PATH=/home/jonathan/.opencode/bin:$PATH
 
 case "$(uname -s)" in
     Darwin)
-        echo "Detected: macOS"
         eval "$(/opt/homebrew/bin/brew shellenv)"
         export PATH="$PATH:/opt/homebrew/bin"
         ;;
     Linux)
-        echo "Detected: Linux"
         eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
         ;;
     *)
-        echo "Unknown Operating System"
         exit 1
         ;;
 esac
