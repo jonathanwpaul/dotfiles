@@ -32,15 +32,16 @@ return {
         desc = 'toggle htop',
       })
 
-      -- vim.keymap.set({ 'n', 't' }, '<leader>.', '<Cmd>ToggleTerm direction=float<CR>', { desc = 'toggle floating terminal' })
-      -- vim.keymap.set({ 'n', 't' }, '<leader>tzh', '<Cmd>ToggleTerm direction=horizontal size=30<CR>', { desc = 'open split terminal' })
-      vim.keymap.set({ 'n', 't' }, '<leader>.', '<Cmd>ToggleTerm direction=vertical size=60<CR>', { desc = 'open vertical terminal' })
+      vim.keymap.set({ 'n', 't' }, '<leader>-S-/', '<Cmd>ToggleTerm direction=float<CR>',
+        { desc = 'toggle floating terminal' })
+      vim.keymap.set({ 'n', 't' }, '<leader>/', '<Cmd>ToggleTerm direction=vertical size=60<CR>',
+        { desc = 'open vertical terminal' })
 
       vim.api.nvim_create_user_command('Ts', function(opts)
         -- Split arguments
         local args = vim.split(opts.args, ' ', { trimempty = true })
         local buffer_name = table.remove(args, 1) -- First argument as buffer name
-        local command = table.concat(args, ' ') -- Remaining arguments as command
+        local command = table.concat(args, ' ')   -- Remaining arguments as command
 
         -- Open horizontal split with terminal
         vim.cmd 'sp term://zsh'
@@ -60,7 +61,7 @@ return {
         -- Split arguments
         local args = vim.split(opts.args, ' ', { trimempty = true })
         local buffer_name = table.remove(args, 1) -- First argument as buffer name
-        local command = table.concat(args, ' ') -- Remaining arguments as command
+        local command = table.concat(args, ' ')   -- Remaining arguments as command
 
         -- Open vertical split with terminal
         vim.cmd 'vs term://zsh'
