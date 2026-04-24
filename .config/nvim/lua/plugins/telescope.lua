@@ -62,6 +62,9 @@ return {
           prompt_position = 'bottom',
           height = 0.95,
         },
+        preview = {
+          treesitter = false,
+        },
       },
       pickers = {
         find_files = {
