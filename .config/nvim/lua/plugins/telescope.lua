@@ -46,8 +46,8 @@ return {
         mappings = {
           i = {
             ['<C-k>'] = actions.move_selection_previous, -- move to prev result
-            ['<C-j>'] = actions.move_selection_next, -- move to next result
-            ['<C-l>'] = actions.select_default, -- open file
+            ['<C-j>'] = actions.move_selection_next,     -- move to next result
+            ['<C-l>'] = actions.select_default,          -- open file
           },
           n = {
             ['q'] = actions.close,
@@ -67,9 +67,13 @@ return {
         },
       },
       pickers = {
+        live_grep = {
+          additional_args = function(_)
+            return { "--hidden" }
+          end
+        },
         find_files = {
-          file_ignore_patterns = { 'node_modules', '.git', '.venv' },
-          hidden = true,
+          hidden = true
         },
         buffers = {
           initial_mode = 'insert',
@@ -83,13 +87,6 @@ return {
           },
         },
       },
-      live_grep = {
-        file_ignore_patterns = { 'node_modules', '.git', '.venv' },
-        additional_args = function(_)
-          return { '--hidden' }
-        end,
-      },
-
       extensions = {
         ['ui-select'] = {
           require('telescope.themes').get_dropdown(),
@@ -105,27 +102,28 @@ return {
     pcall(require('telescope').load_extension, 'ui-select')
 
     -- general searching
-    vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[s]earch [f]iles' })
-    vim.keymap.set('n', '<leader>saf', builtin.find_files, { desc = '[s]earch [a]ll [f]iles' })
-    vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[s]earch [g]rep' })
+    vim.keymap.set('n', '<leader>sf', function()
+      builtin.find_files
+      { file_ignore_patterns = { 'node_modules', '.git', '.venv' } }
+    end
+    , { desc = '[s]earch [f]iles' })
+    vim.keymap.set('n', '<leader>saf', function()
+      builtin.find_files { no_ignore = true }
+    end, { desc = '[s]earch [a]ll [f]iles' })
+    vim.keymap.set('n', '<leader>sg', function()
+      builtin.live_grep
+      { file_ignore_patterns = { 'node_modules', '.git', '.venv' } }
+    end
+    , { desc = '[s]earch [g]rep' })
+    vim.keymap.set('n', '<leader>sag', function()
+      builtin.live_grep { no_ignore = true }
+    end, { desc = '[s]earch [a]ll [g]rep' })
+
     vim.keymap.set('n', '<leader>sgw', builtin.grep_string, { desc = '[s]earch current [w]ord' })
     vim.keymap.set('n', '<leader>sm', builtin.marks, { desc = '[s]earch [m]arks' })
     vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[s]earch [h]elp tags' })
     vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[s]earch [k]eymaps' })
-    vim.keymap.set('n', '<leader>/', function()
-      -- You can pass additional configuration to telescope to change theme, layout, etc.
-      builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-        previewer = false,
-      })
-    end, { desc = '[/] fuzzily search in current buffer' })
-    vim.keymap.set('n', '<leader>?', builtin.oldfiles, { desc = '[?] search recently opened files' })
     vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[s]earch existing [b]uffers' })
-    vim.keymap.set('n', '<leader>s/', function()
-      builtin.live_grep {
-        grep_open_files = true,
-        prompt_title = 'live grep in open files',
-      }
-    end, { desc = '[s]earch [/] in Open Files' })
 
     -- git maps
     vim.keymap.set('n', '<leader>sgf', builtin.git_files, { desc = 'search [g]it [f]iles' })
