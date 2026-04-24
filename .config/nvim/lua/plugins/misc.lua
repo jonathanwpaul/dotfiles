@@ -1,11 +1,6 @@
 -- Standalone plugins with less than 10 lines of config go here
 return {
   {
-    -- autoclose tags
-    'windwp/nvim-ts-autotag',
-    enabled = false,
-  },
-  {
     -- detect tabstop and shiftwidth automatically
     'tpope/vim-sleuth',
   },
@@ -35,6 +30,7 @@ return {
       },
     },
   },
+  --TODO: figure out better config for this
   {
     -- Autoclose parentheses, brackets, quotes, etc.
     'windwp/nvim-autopairs',
@@ -52,7 +48,7 @@ return {
   },
   {
     -- high-performance color highlighter
-    'norcalli/nvim-colorizer.lua',
+    'catgoose/nvim-colorizer.lua',
     config = function()
       require('colorizer').setup()
     end,
