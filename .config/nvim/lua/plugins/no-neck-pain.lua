@@ -4,17 +4,15 @@ return {
     require('no-neck-pain').setup {
       width = 120,
       buffers = {
+        right = {
+          enabled = false
+        },
         colors = {
           blend = -0.1,
         },
-        scratchPad = {
-          enabled = false,
-          fileName = 'clipboard',
-          location = '~/',
-        },
-        bo = {
-          filetype = 'md',
-        },
+        wo = {
+          fillchars = "eob: ",
+        }
       },
       mappings = {
         enabled = true,
