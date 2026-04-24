@@ -3,7 +3,7 @@ return {
   opts = {},
   config = function()
     require('conform').setup {
-      format_after_save = { lsp_format = 'fallback' },
+      format_after_save = {},
       formatters_by_ft = {
         lua = { 'stylua' },
         python = { 'black' },
