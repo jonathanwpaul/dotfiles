@@ -79,7 +79,7 @@ return {
           vim.lsp.enable(server_name)
         end,
         lua_ls = function()
-            vim.lsp.config('lua_ls', {
+          vim.lsp.config('lua_ls', {
             capabilities = capabilities,
             settings = {
 
