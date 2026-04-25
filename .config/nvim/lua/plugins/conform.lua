@@ -10,12 +10,11 @@ return {
       typescriptreact = { 'prettierd', 'prettier', stop_after_first = true },
       javascript = { 'prettierd', 'prettier', stop_after_first = true },
       javascriptreact = { 'prettierd', 'prettier', stop_after_first = true },
+      c = { 'clang-format' },
       json = { 'prettierd' },
       yaml = { 'yamlfix', 'prettierd', 'prettier', stop_after_first = true },
       xml = { 'xmlformatter' },
     },
-    default_format_opts = {
-      lsp_format = 'fallback',
-    },
-  }
+    formatters = { clang_format = { prepend_args = { '--style=file', '--fallback-style=LLVM' } } },
+  },
 }
