@@ -10,16 +10,8 @@ antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
-antigen bundle heroku
 antigen bundle pip
-antigen bundle lein
 antigen bundle command-not-found
-
-# alias
-antigen bundle djui/alias-tips
-
-# ghcp
-antigen bundle loiccoyle/zsh-github-copilot@main
 
 # autosuggestions
 antigen bundle zsh-users/zsh-autosuggestions
@@ -28,6 +20,7 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 antigen bundle zsh-users/zsh-history-substring-search
+
 # Load the theme.
 eval "$(starship init zsh)"
 
@@ -75,3 +68,5 @@ case "$(uname -s)" in
 esac
 
 export PATH="$HOME/.local/bin:$PATH"
+
+. "$HOME/.local/share/../bin/env"
