@@ -30,16 +30,16 @@ return {
         vim.keymap.set('n', 'gr', function()
           telescope.lsp_references()
         end, opts)
-        vim.keymap.set('n', '<C-.>', function()
+        vim.keymap.set('n', '<leader>lh', function()
           vim.lsp.buf.hover()
         end, opts)
         vim.keymap.set('n', '<leader>lca', function()
           vim.lsp.buf.code_action()
         end, opts)
 
-        vim.keymap.set('n', '<leader>ld', telescope.diagnostics, { desc = '[s]earch [d]iagnostics' })
-        vim.keymap.set('n', '<leader>ls', function()
-          telescope.builtin.lsp_document_symbols {
+        vim.keymap.set('n', '<leader>lsd', telescope.diagnostics, { desc = '[s]earch [d]iagnostics' })
+        vim.keymap.set('n', '<leader>lss', function()
+          telescope.lsp_document_symbols {
             symbols = { 'Class', 'Function', 'Method', 'Constructor', 'Interface', 'Module', 'Property' },
           }
         end, { desc = '[s]earch lsp document [s]ymbols' })
@@ -47,17 +47,11 @@ return {
         vim.keymap.set('n', '<leader>lrn', function()
           vim.lsp.buf.rename()
         end, opts)
-        vim.keymap.set('i', '<C-h>', function()
-          vim.lsp.buf.signature_help()
-        end, opts)
         vim.keymap.set('n', ']d', function()
           vim.diagnostic.goto_next()
         end, opts)
         vim.keymap.set('n', '[d', function()
           vim.diagnostic.goto_prev()
-        end, opts)
-        vim.keymap.set('n', 'K', function()
-          vim.diagnostic.open_float()
         end, opts)
       end,
     })
@@ -69,6 +63,14 @@ return {
         'ts_ls',
         'lua_ls',
         'jsonls',
+        'bashls',
+        'black',
+        'clang-format',
+        'cssls',
+        'prettierd',
+        'ruff',
+        'shfmt',
+        'stylua',
       },
       handlers = {
         function(server_name) -- default handler (optional)
