@@ -17,8 +17,7 @@ return {
   config = function()
     local cmp = require 'cmp'
     local cmp_lsp = require 'cmp_nvim_lsp'
-    local capabilities = vim.tbl_deep_extend('force', {}, vim.lsp.protocol.make_client_capabilities(),
-      cmp_lsp.default_capabilities())
+    local capabilities = vim.tbl_deep_extend('force', {}, vim.lsp.protocol.make_client_capabilities(), cmp_lsp.default_capabilities())
     local telescope = require 'telescope.builtin'
 
     vim.api.nvim_create_autocmd('LspAttach', {
@@ -31,7 +30,7 @@ return {
         vim.keymap.set('n', 'gr', function()
           telescope.lsp_references()
         end, opts)
-        vim.keymap.set('n', '<C-Space>', function()
+        vim.keymap.set('n', '<C-.>', function()
           vim.lsp.buf.hover()
         end, opts)
         vim.keymap.set('n', '<leader>lca', function()
@@ -99,23 +98,23 @@ return {
               },
             },
           })
-          vim.lsp.enable('lua_ls')
+          vim.lsp.enable 'lua_ls'
         end,
       },
     }
 
-    vim.lsp.config("ccls", {
+    vim.lsp.config('ccls', {
       init_options = {
         diagnostics = {
           onChange = 100,
         },
       },
     })
-    vim.lsp.enable('ccls')
+    vim.lsp.enable 'ccls'
 
     -- Optional: Fallback to clangd if .ccls doesn't exist
-    if vim.fn.filereadable(vim.uv.cwd() .. "/.ccls") == 0 then
-      vim.lsp.enable("clangd")
+    if vim.fn.filereadable(vim.uv.cwd() .. '/.ccls') == 0 then
+      vim.lsp.enable 'clangd'
     end
 
     local cmp_select = { behavior = cmp.SelectBehavior.Select }
@@ -134,8 +133,8 @@ return {
       },
       sources = cmp.config.sources({
         { name = 'nvim_lsp', group_index = 1 },
-        { name = 'copilot',  group_index = 2 },
-        { name = 'luasnip',  group_index = 3 }, -- For luasnip users.
+        { name = 'copilot', group_index = 2 },
+        { name = 'luasnip', group_index = 3 }, -- For luasnip users.
       }, {
         { name = 'buffer' },
       }),
