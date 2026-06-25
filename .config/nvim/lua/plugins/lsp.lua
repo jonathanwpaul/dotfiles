@@ -57,7 +57,12 @@ return {
     })
 
     require('fidget').setup {}
-    require('mason').setup()
+    require('mason').setup({
+        registries = {
+            'github:Crashdummyy/mason-registry', -- this contains the register for Roslyn
+            'github:mason-org/mason-registry', 
+        },
+    })
     require('mason-lspconfig').setup {
       ensure_installed = {
         'ts_ls',
