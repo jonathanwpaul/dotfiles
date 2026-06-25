@@ -52,10 +52,6 @@ vim.keymap.set('n', '<Right>', ':vertical resize +2<CR>', opts)
 vim.keymap.set('n', '<leader>q', ':bdelete!<CR>', opts) -- close buffer
 vim.keymap.set('n', '<leader>bd', ':bdelete<CR>', opts) -- new buffer
 
--- Increment/decrement numbers
-vim.keymap.set('n', '<leader>+', '<C-a>', opts) -- increment
-vim.keymap.set('n', '<leader>-', '<C-x>', opts) -- decrement
-
 -- Window management
 -- vim.keymap.set('n', '<leader>v', '<C-w>v', opts) -- split window vertically
 vim.keymap.set('n', '<leader>h', '<C-w>s', opts) -- split window horizontally
@@ -77,9 +73,9 @@ vim.keymap.set('n', '<leader>tp', ':tabp<CR>', opts) --  go to previous tab
 -- Toggle line wrapping
 vim.keymap.set('n', '<leader>lw', '<cmd>set wrap!<CR>', opts)
 
--- Press jk fast to exit insert mode
-vim.keymap.set('i', 'jk', '<ESC>', opts)
-vim.keymap.set('i', 'kj', '<ESC>', opts)
+-- Swap characters
+vim.keymap.set('n', '<S-l>', 'dlp', opts)
+vim.keymap.set('n', '<S-h>', 'dhp', opts)
 
 -- Stay in indent mode
 vim.keymap.set('v', '<', '<gv', opts)
