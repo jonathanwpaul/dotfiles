@@ -1,15 +1,9 @@
 {
-  "accentColor": "#3f7c88",
-  "interfaceFontFamily": "Open Sans",
-  "nativeMenus": true,
-  "translucency": true,
-  "showViewHeader": false,
+  "accentColor": "#3d9182",
+  "theme": "moonstone",
+  "showViewHeader": true,
+  "translucency": false,
   "enabledCssSnippets": [
-    "default",
-    "outline"
-  ],
-  "theme": "obsidian",
-  "monospaceFontFamily": "FiraCode Nerd Font",
-  "textFontFamily": "Cascadia Code",
-  "cssTheme": "Blue Topaz"
+    "snippets"
+  ]
 }

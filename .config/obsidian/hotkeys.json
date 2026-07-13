@@ -8,15 +8,6 @@
       "key": "E"
     }
   ],
-  "editor:toggle-numbered-list": [
-    {
-      "modifiers": [
-        "Alt",
-        "Mod"
-      ],
-      "key": "1"
-    }
-  ],
   "editor:toggle-bullet-list": [
     {
       "modifiers": [
@@ -25,24 +16,8 @@
       "key": "."
     }
   ],
-  "editor:toggle-blockquote": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "."
-    }
-  ],
-  "editor:swap-line-up": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "ArrowUp"
-    }
-  ],
-  "editor:swap-line-down": [
+  "obsidian-editor-shortcuts:selectLine": [],
+  "obsidian-editor-shortcuts:copyLineDown": [
     {
       "modifiers": [
         "Alt"
@@ -50,14 +25,12 @@
       "key": "ArrowDown"
     }
   ],
-  "editor:toggle-checklist-status": [],
-  "obsidian-editor-shortcuts:selectLine": [],
-  "obsidian-tasks-plugin:toggle-done": [
+  "obsidian-editor-shortcuts:copyLineUp": [
     {
       "modifiers": [
-        "Ctrl"
+        "Alt"
       ],
-      "key": "Enter"
+      "key": "ArrowUp"
     }
   ]
 }

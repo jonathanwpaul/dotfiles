@@ -1,4 +1,4 @@
 {
-  "folder": "meetings",
-  "template": "meetings/template"
+  "folder": "dailies/",
+  "template": "dailies/_template.md"
 }

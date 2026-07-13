@@ -1,0 +1,390 @@
+{
+  "main": {
+    "id": "219e6d700cc5fca8",
+    "type": "split",
+    "children": [
+      {
+        "id": "35358891d7a91fbf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7d32745d0a7ed5e0",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "8a0303e1cec92258",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "30fbc0c4dccfc2b1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "jina/Schedule.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Schedule"
+            }
+          },
+          {
+            "id": "c343bc11d29da2df",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "d0a4a8a70dee012b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "jina/Don't forget to tell.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Don't forget to tell"
+            }
+          },
+          {
+            "id": "af5c1c072ffe64ff",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "job-search-2026/tailored/spotify/screening-prep.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "screening-prep"
+            }
+          },
+          {
+            "id": "e2dfa0cb1b4e20db",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "recipes/src/Chicken seasoning.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Chicken seasoning"
+            }
+          },
+          {
+            "id": "274c33fdb96a051e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "projects/Piping for drip.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Piping for drip"
+            }
+          },
+          {
+            "id": "de86296c8c562c55",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "jina/Date ideas.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Date ideas"
+            }
+          },
+          {
+            "id": "89e1a8a36fa54bd1",
+            "type": "leaf",
+            "state": {
+              "type": "bases",
+              "state": {
+                "file": "TaskNotes/Views/kanban-default.base",
+                "viewName": "Kanban Board"
+              },
+              "icon": "tasknotes-simple",
+              "title": "kanban-default"
+            }
+          },
+          {
+            "id": "044ba6f4c15952e7",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "4490f69f2b46e757",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "projects/Print queue.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Print queue"
+            }
+          },
+          {
+            "id": "ca7e0bfcc5944c44",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "jina/Date ideas.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Date ideas"
+            }
+          },
+          {
+            "id": "9bf7b019590360c5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "random-lists/prayer.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "prayer"
+            }
+          }
+        ],
+        "currentTab": 13
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "11f3b100c8dc7d4e",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "ff12ad4c83978684",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical",
+            "autoReveal": false
+          },
+          "icon": "lucide-folder-closed",
+          "title": "Files"
+        }
+      },
+      {
+        "id": "5094f725cc4001d2",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          },
+          "icon": "lucide-search",
+          "title": "Search"
+        }
+      },
+      {
+        "id": "648ae3062c16b065",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-tags",
+          "title": "Tags"
+        }
+      },
+      {
+        "id": "5915d87655bbc3ba",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {},
+          "icon": "lucide-bookmark",
+          "title": "Bookmarks"
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "2c54cf38014af5f9",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "d17a3e7637811920",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "random-lists/Chores.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-coming-in",
+          "title": "Backlinks"
+        }
+      },
+      {
+        "id": "b86a968f9b20ce78",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "job-search-2026/Plan.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-going-out",
+          "title": "Outgoing links"
+        }
+      },
+      {
+        "id": "c78ad28fe744ed2e",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "job-search-2026/Plan.md",
+            "followCursor": false,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-list",
+          "title": "Outline"
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "tasknotes:Open mini calendar view": false,
+      "tasknotes:Open calendar view": false,
+      "tasknotes:Open tasks view": false,
+      "tasknotes:Open agenda view": false,
+      "tasknotes:Open Kanban board": false,
+      "tasknotes:Open Pomodoro timer": false,
+      "tasknotes:Open Pomodoro statistics": false,
+      "tasknotes:Create new task": false,
+      "bulk-properties:Bulk edit selected notes": false,
+      "templater-obsidian:Templater": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-importer:Open Importer": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "bases:Create new base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "9bf7b019590360c5",
+  "lastOpenFiles": [
+    "random-lists/Chores.md",
+    "random-lists/watch.md",
+    "jina/Date ideas.md",
+    "TaskNotes/Views/tasks-default.base",
+    "projects/Print queue.md",
+    "projects/Print queue/phone stand mag safe.md",
+    "projects/Print queue/Printer paper notebook.md",
+    "projects/Print queue/Led strip holder for ender 5 extrusions.md",
+    "projects/Print queue",
+    "projects/endorphin.md",
+    "projects/endorphin/Wire nozzle fan.md",
+    "TaskNotes/Views/Print queue.md",
+    "TaskNotes/Views/Print queue/Phone holder for camera mount.md",
+    "TaskNotes/Views/Print queue/poop bag holder.md",
+    "TaskNotes/Views/Print queue/belt hanger.md",
+    "TaskNotes/Views/Print queue",
+    "TaskNotes/Views/kanban-default.base",
+    "random-lists/print.md",
+    "projects/Piping for drip.md",
+    "Excalidraw/Drawing 2026-07-04 17.47.14.excalidraw.md",
+    "Excalidraw",
+    "projects/Untitled.canvas",
+    "recipes/src/Chicken seasoning.md",
+    "projects/kindler/Untitled.md",
+    "recipes/src/chicken.md",
+    "recipes/index.md",
+    "jina/Schedule.md",
+    "recipes/Chicken seasoning.md",
+    "recipes/src/IMG_20260704_121004.heic",
+    "recipes/src/IMG_20260704_121004 (4).heic",
+    "recipes/src/IMG_20260704_121004 (3).heic",
+    "recipes/src/IMG_20260704_121004 (2).heic",
+    "recipes/src/IMG_20260704_121004 (1).heic",
+    "jina/Gift ideas.md",
+    "random-lists/Packing List.md",
+    "jina/Ring.md",
+    "jina/Plan.md",
+    "apartments/layout.png",
+    "apartments/layoutnobackground.png",
+    "music/Pasted image 20240115115411.png",
+    "music/Pasted image 20240115115330.png",
+    "music/source-files/AllTheThingsYouAre_PhilWoods/Thumbnails/thumbnail.png"
+  ]
+}

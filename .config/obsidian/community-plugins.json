@@ -1,11 +1,11 @@
 [
-  "better-word-count",
-  "canvas-mindmap",
+  "obsidian-opener",
   "obsidian-editor-shortcuts",
-  "obsidian-pandoc",
-  "obsidian-enhancing-export",
+  "obsidian-excalidraw-plugin",
   "table-editor-obsidian",
-  "obsidian-tasks-plugin",
-  "dataview",
-  "obsidian-view-mode-by-frontmatter"
+  "edit-in-neovim",
+  "obsidian-importer",
+  "templater-obsidian",
+  "tasknotes",
+  "bulk-properties"
 ]
