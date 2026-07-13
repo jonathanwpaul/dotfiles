@@ -21,7 +21,7 @@ You are working with a developer who uses:
 
 ## Git
 
-- Commit messages follow Conventional Commits: `type(scope): description`
+- Commit messages do not need to follow Conventional Commits but can: `type(scope): description`
 - Types: `feat`, `fix`, `refactor`, `chore`, `docs`, `test`, `perf`, `ci`
 - Subject line: imperative mood, no period, max 72 chars
 - Never suggest `git push --force` on main/master
@@ -31,7 +31,8 @@ You are working with a developer who uses:
 - Be direct and terse. Skip preamble and affirmations.
 - When multiple approaches exist, state the tradeoff briefly then recommend one
 - Do not add `console.log` or `print` debug statements unless asked
-- When editing files, make the minimal change that solves the problem
+- Do not add comments to code changes unless specifically asked
+- When editing files, make the minimal change that solves the problem. Stick to modifying existing code wherever possible. If duplications of code exist, this is bad.
 - When you're unsure about project-specific conventions, ask before assuming
 
 ## File Operations
