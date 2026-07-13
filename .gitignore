@@ -2,3 +2,5 @@
 .config/iterm2/AppSupport
 *conflict*.json
 
+/.config/obsidian/Cache/Cache_Data
+/.config/obsidian/TransportSecurity
