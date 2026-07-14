@@ -1,11 +1,11 @@
-# Global OpenCode Rules
+# Global Agent Rules
 
-These rules apply across all projects. Project-level `AGENTS.md` files extend or override these.
+These rules apply across all projects. Project-level agent instruction files (`AGENTS.md`, `CLAUDE.md`, etc.) extend or override these.
 
 ## Identity
 
 You are working with a developer who uses:
-- **Editor**: Neovim with opencode.nvim integration
+- **Editor**: Neovim
 - **Shell**: zsh + tmux
 - **Languages**: TypeScript/JavaScript, Python, SQL, C/C++ (embedded)
 - **Formatters**: prettier (TS/JS/YAML), black + isort (Python), stylua (Lua)
