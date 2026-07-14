@@ -6,3 +6,5 @@
 /.config/obsidian/TransportSecurity
 /.config/tmux/plugins/tmux
 /.config/tmux/plugins/tmux-sensible
+/.config/obsidian/bookmarks.json
+/.config/obsidian/workspace.json
