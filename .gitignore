@@ -4,3 +4,5 @@
 
 /.config/obsidian/Cache/Cache_Data
 /.config/obsidian/TransportSecurity
+/.config/tmux/plugins/tmux
+/.config/tmux/plugins/tmux-sensible
