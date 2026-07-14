@@ -1,6 +1,6 @@
 ---
 name: docker
-description: Docker and docker compose patterns, common aliases, debugging containers
+description: Use when working with Dockerfiles, compose.yml, or debugging container issues. Covers user's compose conventions, multi-stage Dockerfile patterns, and debugging commands.
 ---
 
 ## Aliases in use

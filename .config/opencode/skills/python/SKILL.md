@@ -1,6 +1,6 @@
 ---
 name: python
-description: Python patterns, black+isort formatting, pyenv, type hints, common project structures
+description: Use when writing or modifying Python code — enforces black+isort formatting, type-hint style, pyenv version management, and preferred project layouts.
 ---
 
 ## Toolchain

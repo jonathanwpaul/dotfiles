@@ -1,6 +1,6 @@
 ---
 name: embedded
-description: PlatformIO + C/C++ embedded development workflow, nvim-platformio keybinds, common patterns
+description: Use when editing C/C++ for microcontrollers, working with PlatformIO (pio) projects, platformio.ini configs, or debugging embedded hardware.
 ---
 
 ## Toolchain

@@ -1,6 +1,6 @@
 ---
 name: typescript
-description: TypeScript patterns, strict config, formatting with prettier, common pitfalls
+description: Use when writing or modifying TypeScript/JavaScript — enforces strict tsconfig conventions, prettier formatting, and flags common pitfalls (any-types, enum misuse).
 ---
 
 ## Toolchain
