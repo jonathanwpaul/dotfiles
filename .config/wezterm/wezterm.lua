@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 
-config.color_scheme = "rose-pine-moon"
+config.color_scheme = "rose-pine-dawn"
 config.font = wezterm.font("CaskaydiaCove Nerd Font")
 config.font_size = 12.0
 config.macos_window_background_blur = 50
