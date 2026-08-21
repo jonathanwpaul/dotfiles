@@ -57,25 +57,20 @@ return {
     })
 
     require('fidget').setup {}
-    require('mason').setup({
-        registries = {
-            'github:Crashdummyy/mason-registry', -- this contains the register for Roslyn
-            'github:mason-org/mason-registry', 
-        },
-    })
+    require('mason').setup {
+      registries = {
+        'github:Crashdummyy/mason-registry', -- this contains the register for Roslyn
+        'github:mason-org/mason-registry',
+      },
+    }
     require('mason-lspconfig').setup {
       ensure_installed = {
         'ts_ls',
         'lua_ls',
         'jsonls',
         'bashls',
-        'black',
-        'clang-format',
         'cssls',
-        'prettierd',
-        'ruff',
-        'shfmt',
-        'stylua',
+        'gh_actions_ls',
       },
       handlers = {
         function(server_name) -- default handler (optional)
