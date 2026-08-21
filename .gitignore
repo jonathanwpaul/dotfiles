@@ -8,3 +8,4 @@
 /.config/tmux/plugins/tmux-sensible
 /.config/obsidian/bookmarks.json
 /.config/obsidian/workspace.json
+/.config/pgcli/history
