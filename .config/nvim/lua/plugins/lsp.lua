@@ -27,17 +27,22 @@ return {
         vim.keymap.set('n', 'gd', function()
           telescope.lsp_definitions()
         end, opts)
+
         vim.keymap.set('n', 'gr', function()
           telescope.lsp_references()
         end, opts)
+
         vim.keymap.set('n', '<leader>lh', function()
           vim.lsp.buf.hover()
         end, opts)
+
+        vim.keymap.set('n', '<leader>ld', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
+
         vim.keymap.set('n', '<leader>lca', function()
           vim.lsp.buf.code_action()
         end, opts)
-
         vim.keymap.set('n', '<leader>lsd', telescope.diagnostics, { desc = '[s]earch [d]iagnostics' })
+
         vim.keymap.set('n', '<leader>lss', function()
           telescope.lsp_document_symbols {
             symbols = { 'Class', 'Function', 'Method', 'Constructor', 'Interface', 'Module', 'Property' },
@@ -47,9 +52,11 @@ return {
         vim.keymap.set('n', '<leader>lrn', function()
           vim.lsp.buf.rename()
         end, opts)
+
         vim.keymap.set('n', ']d', function()
           vim.diagnostic.goto_next()
         end, opts)
+
         vim.keymap.set('n', '[d', function()
           vim.diagnostic.goto_prev()
         end, opts)
