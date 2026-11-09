@@ -36,7 +36,7 @@ return {
           vim.lsp.buf.hover()
         end, opts)
 
-        vim.keymap.set('n', '<leader>ld', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
+        vim.keymap.set('n', '<leader>ld', vim.diagnostic.open_float, { desc = 'open floating diagnostic message' })
 
         vim.keymap.set('n', '<leader>lca', function()
           vim.lsp.buf.code_action()
@@ -138,7 +138,7 @@ return {
         -- ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
         -- ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
         -- ['<expand>'] = cmp.mapping.confirm { select = true },
-        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<C-.'] = cmp.mapping.complete(),
       },
       sources = cmp.config.sources({
         { name = 'nvim_lsp', group_index = 1 },
